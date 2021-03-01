@@ -13,9 +13,9 @@ public class ProductServiceImpl implements ProductService {
     public ProductServiceImpl() {
         DB = new ArrayList<>();
         DB.add(
-                new Product(1,"Iphone 12 Pro Max", "This is new iph 12 pro max...", 500, 10, "test.png"));
+                new Product(1, "Iphone 12 Pro Max", "This is new iph 12 pro max...", 500, 10, "test.png"));
         DB.add(
-                new Product(2,"Iphone 11 Pro Max", "This is iphone 11 pro max...", 500, 7, "test2.png"));
+                new Product(2, "Iphone 11 Pro Max", "This is iphone 11 pro max...", 500, 7, "test2.png"));
     }
 
     @Override
@@ -27,7 +27,7 @@ public class ProductServiceImpl implements ProductService {
     public Product getProduct(long productId) {
         Product foundProduct = null;
 
-        for(Product product: DB) {
+        for (Product product : DB) {
             if (product.getId() == productId) {
                 foundProduct = product;
                 break;
@@ -38,7 +38,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public String addProduct(Product product) {
-        for (Product item: DB) {
+        for (Product item : DB) {
             if (item.getId() == product.getId()) {
                 return "ID already exists in database";
             }
