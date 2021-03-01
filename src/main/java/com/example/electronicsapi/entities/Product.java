@@ -1,4 +1,4 @@
-package entities;
+package com.example.electronicsapi.entities;
 
 public class Product {
 
@@ -6,9 +6,20 @@ public class Product {
     private String title;
     private String description;
     private double price;
+    private String imageUrl;
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    private int quantity;
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public void setTitle(String title) {
@@ -39,10 +50,19 @@ public class Product {
         return price;
     }
 
-    public Product(long id, String title, String description, double price) {
+    public int getQuantity() {
+        return quantity;
+    }
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public Product(long id, String title, String description, double price, int quantity, String imageUrl) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
+        this.quantity = quantity;
+        this.imageUrl = imageUrl;
     }
 }
