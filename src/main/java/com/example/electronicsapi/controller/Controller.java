@@ -2,9 +2,7 @@ package com.example.electronicsapi.controller;
 
 import com.example.electronicsapi.entities.Product;
 import com.example.electronicsapi.services.ProductService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,5 +28,10 @@ public class Controller {
     @GetMapping("/product/{productId}")
     public Product getProduct(@PathVariable String productId) {
         return this.productService.getProduct(Long.parseLong(productId));
+    }
+
+    @PostMapping(path="/products")
+    public String addProduct(@RequestBody Product product) {
+        return this.productService.addProduct(product);
     }
 }

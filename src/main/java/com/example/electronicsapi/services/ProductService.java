@@ -5,7 +5,10 @@ import com.example.electronicsapi.entities.Product;
 import java.util.List;
 
 public interface ProductService {
-     public List<Product> getProducts();
+    List<Product> getProducts();
 
-     public Product getProduct(long productId);
+    Product getProduct(long productId);
+
+    String addProduct(Product product);
+
 }

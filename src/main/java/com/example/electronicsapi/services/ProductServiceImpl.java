@@ -35,4 +35,16 @@ public class ProductServiceImpl implements ProductService {
         }
         return foundProduct;
     }
+
+    @Override
+    public String addProduct(Product product) {
+        for (Product item: DB) {
+            if (item.getId() == product.getId()) {
+                return "ID already exists in database";
+            }
+        }
+        this.DB.add(product);
+        return "Added with success!!";
+    }
+
 }
