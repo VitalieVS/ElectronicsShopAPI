@@ -15,11 +15,6 @@ public class Controller {
         this.productService = productService;
     }
 
-    @GetMapping("/home")
-    public String home() {
-        return "Welcome to electronics API";
-    }
-
     @GetMapping("/products")
     public List<Product> getProducts() {
         return this.productService.getProducts();
