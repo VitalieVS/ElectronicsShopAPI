@@ -1,6 +1,6 @@
 package com.example.electronicsapi.entities;
 
-public class Categories {
+public class Category {
     private String name;
 
     public String getName() {
@@ -11,7 +11,7 @@ public class Categories {
         this.name = name;
     }
 
-    public Categories(String name) {
+    public Category(String name) {
         this.name = name;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.electronicsapi.services;
 
+import com.example.electronicsapi.entities.Category;
 import com.example.electronicsapi.entities.Product;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService {
     List<Product> DB;
+    List<Category> categoriesDB;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
@@ -16,6 +18,21 @@ public class ProductServiceImpl implements ProductService {
                 new Product(1, "Iphone 12 Pro Max", "This is new iph 12 pro max...", 500, 10, "test.png"));
         DB.add(
                 new Product(2, "Iphone 11 Pro Max", "This is iphone 11 pro max...", 500, 7, "test2.png"));
+        categoriesDB = new ArrayList<>();
+
+        categoriesDB.add(new Category(
+                "Phones"
+        ));
+        categoriesDB.add(new Category(
+                "Cases"
+        ));
+        categoriesDB.add(new Category(
+                "Power Banks"
+        ));
+        categoriesDB.add(new Category(
+                "Power Adapters"
+        ));
+
     }
 
     @Override
@@ -45,6 +62,11 @@ public class ProductServiceImpl implements ProductService {
         }
         this.DB.add(product);
         return "Added with success!!";
+    }
+
+    @Override
+    public List<Category> getCategories() {
+        return categoriesDB;
     }
 
 }
