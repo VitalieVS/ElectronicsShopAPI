@@ -32,6 +32,9 @@ public class ProductServiceImpl implements ProductService {
         categoriesDB.add(new Category(
                 "Power Adapters"
         ));
+        categoriesDB.add(new Category(
+                "Cables"
+        ));
 
     }
 
@@ -67,6 +70,17 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Category> getCategories() {
         return categoriesDB;
+    }
+
+    @Override
+    public int removeCategory(String category) {
+        for (Category currCategory : categoriesDB) {
+            if (currCategory.getName().equals(category)) {
+                categoriesDB.remove(currCategory);
+                return 1;
+            }
+        }
+        return 0;
     }
 
 }
