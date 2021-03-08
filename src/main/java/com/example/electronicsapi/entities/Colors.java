@@ -2,6 +2,7 @@ package com.example.electronicsapi.entities;
 
 public class Colors {
     private String color;
+    private boolean available;
 
     public void setColor(String color) {
         this.color = color;
@@ -24,7 +25,7 @@ public class Colors {
         this.available = available;
     }
 
-    private boolean available;
+
 
 
 }

@@ -1,6 +1,8 @@
 package com.example.electronicsapi.services;
 
+import com.example.electronicsapi.entities.Capacity;
 import com.example.electronicsapi.entities.Category;
+import com.example.electronicsapi.entities.Colors;
 import com.example.electronicsapi.entities.Product;
 import org.springframework.stereotype.Service;
 
@@ -11,17 +13,68 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     List<Product> DB;
     List<Category> categoriesDB;
+    List<Colors> colors;
+    List<Capacity> memSize;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
         categoriesDB = new ArrayList<>();
-        DB.add(
-                new Product(1, "Iphone 12 Pro Max", "This is new iph 12 pro max...", 500, "test.png", 10, "iphone"));
-        DB.add(
-                new Product(2, "Iphone 11 Pro Max", "This is iphone 11 pro max...", 500, "test2.png", 20, "iphone"));
+        colors = new ArrayList<>();
+        memSize = new ArrayList<>();
+
+        colors.add(
+                new Colors("black", true)
+        );
+        colors.add(
+                new Colors("green", true)
+        );
+        colors.add(
+                new Colors("white", true)
+        );
+
+        memSize.add(
+                new Capacity("128GB", true)
+        );
+
+        memSize.add(
+                new Capacity("256GB", true)
+        );
+
+        memSize.add(
+                new Capacity("512GB", true)
+        );
 
         DB.add(
-                new Product(3, "Lightning Cable", "Light cable", 20, "test4.png", 35, "cable"));
+                new Product(
+                        1,
+                        "Iphone 12 Pro Max",
+                        "This is new iph 12 pro max...",
+                        500, "test.png",
+                        10,
+                        "iphone",
+                        colors,
+                        memSize));
+        DB.add(
+                new Product(2,
+                        "Iphone 11 Pro Max",
+                        "This is iphone 11 pro max...",
+                        500,
+                        "test2.png",
+                        20,
+                        "iphone",
+                        colors,
+                        memSize));
+
+        DB.add(
+                new Product(3,
+                        "Lightning Cable",
+                        "Light cable",
+                        20,
+                        "test4.png",
+                        35,
+                        "cable",
+                        colors,
+                        memSize));
 
 
         categoriesDB.add(

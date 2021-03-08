@@ -13,10 +13,6 @@ public class Product {
     //to check by quantity if in stock.
     private List<Colors> colors;
 
-    public List<Colors> getColors() {
-        return colors;
-    }
-
     public void setColors(List<Colors> colors) {
         this.colors = colors;
     }
@@ -27,14 +23,6 @@ public class Product {
 
     public void setMemoryCapacity(List<Capacity> memoryCapacity) {
         this.memoryCapacity = memoryCapacity;
-    }
-
-    public List<Colors> getGetColors() {
-        return getColors;
-    }
-
-    public void setGetColors(List<Colors> getColors) {
-        this.getColors = getColors;
     }
 
     private List<Capacity> memoryCapacity;
@@ -115,5 +103,5 @@ public class Product {
         return imageUrl;
     }
 
-    public List<Colors> getColors { return colors};
+    public List<Colors> getColors() { return colors;}
 }
