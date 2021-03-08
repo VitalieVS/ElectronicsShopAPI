@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService {
                         1,
                         "Iphone 12 Pro Max",
                         "This is new iph 12 pro max...",
-                        500, "test.png",
+                        500, "iph12_purple_mini.png",
                         10,
                         "iphone",
                         colors,
@@ -59,7 +59,18 @@ public class ProductServiceImpl implements ProductService {
                         "Iphone 11 Pro Max",
                         "This is iphone 11 pro max...",
                         500,
-                        "test2.png",
+                        "iph11_gold_mini.png",
+                        20,
+                        "iphone",
+                        colors,
+                        memSize));
+
+        DB.add(
+                new Product(4,
+                        "Iphone 11 Pro",
+                        "This is iphone 11 pro max...",
+                        500,
+                        "iph11_gray_mini.png",
                         20,
                         "iphone",
                         colors,
