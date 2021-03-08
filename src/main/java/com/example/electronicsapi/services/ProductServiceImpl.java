@@ -14,28 +14,26 @@ public class ProductServiceImpl implements ProductService {
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
-        DB.add(
-                new Product(1, "Iphone 12 Pro Max", "This is new iph 12 pro max...", 500, 10, "test.png"));
-        DB.add(
-                new Product(2, "Iphone 11 Pro Max", "This is iphone 11 pro max...", 500, 7, "test2.png"));
         categoriesDB = new ArrayList<>();
+        DB.add(
+                new Product(1, "Iphone 12 Pro Max", "This is new iph 12 pro max...", 500, "test.png", 10, "iphone"));
+        DB.add(
+                new Product(2, "Iphone 11 Pro Max", "This is iphone 11 pro max...", 500, "test2.png", 20, "iphone"));
 
-        categoriesDB.add(new Category(
-                "Phones"
-        ));
-        categoriesDB.add(new Category(
-                "Cases"
-        ));
-        categoriesDB.add(new Category(
-                "Power Banks"
-        ));
-        categoriesDB.add(new Category(
-                "Power Adapters"
-        ));
-        categoriesDB.add(new Category(
-                "Cables"
-        ));
+        DB.add(
+                new Product(3, "Lightning Cable", "Light cable", 20, "test4.png", 35, "cable"));
 
+
+        categoriesDB.add(
+                new Category("Iphone"));
+        categoriesDB.add(
+                new Category("Power Bank"));
+        categoriesDB.add(
+                new Category("Cables"));
+        categoriesDB.add(
+                new Category("Cases"));
+        categoriesDB.add(
+                new Category("Adapters"));
     }
 
     @Override
@@ -81,6 +79,18 @@ public class ProductServiceImpl implements ProductService {
             }
         }
         return 0;
+    }
+
+    @Override
+    public List<Product> getCategoryProducts(String category) {
+        List<Product> temp = new ArrayList<>();
+
+        for (Product product : DB) {
+            if (product.getCategory().equals(category)) {
+                temp.add(product);
+            }
+        }
+        return temp;
     }
 
 }

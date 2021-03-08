@@ -1,18 +1,36 @@
 package com.example.electronicsapi.entities;
 
-public class Product {
+import java.util.List;
 
+public class Product {
     private long id;
     private String title;
     private String description;
     private double price;
     private String imageUrl;
+    private int quantity;
+    private String category;
+    //to check by quantity if in stock.
+    private List<Colors> colors;
 
-    public void setQuantity(int quantity) {
+    public Product(long id, String title, String description, double price, String imageUrl, int quantity, String category, List<Colors> colors) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
         this.quantity = quantity;
+        this.category = category;
+        this.colors = colors;
     }
 
-    private int quantity;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return category;
+    }
 
     public void setId(long id) {
         this.id = id;
@@ -53,16 +71,14 @@ public class Product {
     public int getQuantity() {
         return quantity;
     }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
 
-    public Product(long id, String title, String description, double price, int quantity, String imageUrl) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.quantity = quantity;
-        this.imageUrl = imageUrl;
-    }
+    public List<Colors> getColors { return colors};
 }

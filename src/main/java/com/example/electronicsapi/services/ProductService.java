@@ -16,4 +16,6 @@ public interface ProductService {
 
     int removeCategory(String category);
 
+    List<Product> getCategoryProducts(String category);
+
 }

@@ -1,5 +1,7 @@
 package com.example.electronicsapi.entities;
 
+import java.util.List;
+
 public class Category {
     private String name;
 
@@ -14,4 +16,5 @@ public class Category {
     public Category(String name) {
         this.name = name;
     }
+
 }
