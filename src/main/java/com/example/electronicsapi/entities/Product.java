@@ -12,8 +12,17 @@ public class Product {
     private String category;
     //to check by quantity if in stock.
     private List<Colors> colors;
+    private List<Capacity> memoryCapacity;
 
-    public Product(long id, String title, String description, double price, String imageUrl, int quantity, String category, List<Colors> colors) {
+    public Product(long id,
+                   String title,
+                   String description,
+                   double price,
+                   String imageUrl,
+                   int quantity,
+                   String category,
+                   List<Colors> colors,
+                   List<Capacity> memoryCapacity) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -22,6 +31,7 @@ public class Product {
         this.quantity = quantity;
         this.category = category;
         this.colors = colors;
+        this.memoryCapacity = memoryCapacity;
     }
 
     public void setCategory(String category) {
