@@ -27,7 +27,6 @@ public class Controller {
 
     @PostMapping(path="/products/{category}")
     public String addProduct(@RequestBody Product product, @PathVariable String category) {
-        System.out.println(category);
         return this.productService.addProduct(product);
     }
 

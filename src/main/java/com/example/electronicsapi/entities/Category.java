@@ -1,7 +1,5 @@
 package com.example.electronicsapi.entities;
 
-import java.util.List;
-
 public class Category {
     private String name;
 

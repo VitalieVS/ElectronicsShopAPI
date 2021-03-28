@@ -10,10 +10,9 @@ public class Product {
     private String imageUrl;
     private int quantity;
     private String category;
-    //to check by quantity if in stock.
-    private List<Colors> colors;
+    private List<Color> colors;
 
-    public void setColors(List<Colors> colors) {
+    public void setColors(List<Color> colors) {
         this.colors = colors;
     }
 
@@ -34,7 +33,7 @@ public class Product {
                    String imageUrl,
                    int quantity,
                    String category,
-                   List<Colors> colors,
+                   List<Color> colors,
                    List<Capacity> memoryCapacity) {
         this.id = id;
         this.title = title;
@@ -45,6 +44,23 @@ public class Product {
         this.category = category;
         this.colors = colors;
         this.memoryCapacity = memoryCapacity;
+    }
+
+    public Product(long id,
+                   String title,
+                   String description,
+                   double price,
+                   String imageUrl,
+                   int quantity,
+                   String category) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
+        this.quantity = quantity;
+        this.category = category;
+
     }
 
     public void setCategory(String category) {
@@ -103,5 +119,5 @@ public class Product {
         return imageUrl;
     }
 
-    public List<Colors> getColors() { return colors;}
+    public List<Color> getColors() { return colors;}
 }

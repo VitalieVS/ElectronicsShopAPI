@@ -3,6 +3,7 @@ package com.example.electronicsapi.entities;
 public class Capacity {
     private String size;
     private boolean available;
+    private int price;
 
     public void setSize(String size) {
         this.size = size;
@@ -20,8 +21,17 @@ public class Capacity {
         return available;
     }
 
-    public Capacity(String size, boolean available) {
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public Capacity(String size, boolean available, int price) {
         this.size = size;
         this.available = available;
+        this.price = price;
     }
 }
