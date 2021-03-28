@@ -125,7 +125,7 @@ public class ProductServiceImpl implements ProductService {
                         "Iphone 7 Red",
                         "This is iphone 7.. dummy text",
                         200,
-                        "iph7_black_mini.png",
+                        "iph7_red_mini.png",
                         12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
@@ -153,13 +153,36 @@ public class ProductServiceImpl implements ProductService {
                         iphone7Colors, iphone7memSize));
 
         DB.add(
+                new Product(
+                        7,
+                        "Iphone 7 Gold",
+                        "This is iphone 7.. dummy text",
+                        200,
+                        "iph7_gold_mini.png",
+                        12,
+                        "iphone",
+                        iphone7Colors, iphone7memSize));
+
+        DB.add(
                 new Product(30,
                         "Lightning Cable",
                         "Light cable",
-                        20,
-                        "test4.png",
+                        22,
+                        "iph7_black_mini.png",
+                        40,
+                        "cables",
+                        colors,
+                        null));
+        DB.add(
+                new Product(31,
+                        "Lightning Cable",
+                        "Light cable",
+                        25,
+                        "iph7_black_mini.png",
                         35,
-                        "cables"));
+                        "cables",
+                        colors,
+                        null));
 
         categoriesDB.add(
                 new Category("Iphone"));
