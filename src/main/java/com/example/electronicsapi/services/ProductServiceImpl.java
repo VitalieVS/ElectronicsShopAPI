@@ -13,27 +13,37 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     List<Product> DB;
     List<Category> categoriesDB;
-    List<Color> colors;
+    List<Color> iph12Colors;
     List<Capacity> memSize;
     List<Color> iphone7Colors;
     List<Capacity> iphone7memSize;
+    List<Color> iph11Colors;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
         categoriesDB = new ArrayList<>();
-        colors = new ArrayList<>();
+        iph12Colors = new ArrayList<>();
         memSize = new ArrayList<>();
         iphone7Colors = new ArrayList<>();
         iphone7memSize = new ArrayList<>();
+        iph11Colors = new ArrayList<>();
 
-        colors.add(
-                new Color("black", true)
+        iph12Colors.add(
+                new Color("silver", true)
         );
-        colors.add(
-                new Color("green", true)
+        iph12Colors.add(
+                new Color("purple", true)
         );
-        colors.add(
-                new Color("white", true)
+        iph12Colors.add(
+                new Color("blue", true)
+        );
+
+        iph11Colors.add(
+                new Color("gray",true )
+        );
+
+        iph11Colors.add(
+                new Color("gold",true )
         );
 
         iphone7Colors.add(
@@ -80,37 +90,50 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(
                         1,
-                        "Iphone 12 Pro Max Purple",
+                        "Iphone 12 Blue",
+                        "This is iphone 12 Blue...",
+                        900, "iph12_mini_blue.png",
+                        10,
+                        "iphone",
+                        iph12Colors,
+                        memSize));
+
+        DB.add(
+                new Product(
+                        2,
+                        "Iphone 12 Pro Max",
                         "This is new iph 12 pro max...",
                         900, "iph12_mini_purple.png",
                         10,
                         "iphone",
-                        colors,
+                        iph12Colors,
                         memSize));
+
         DB.add(
-                new Product(2,
+                new Product(3,
                         "Iphone 11 Pro Max Gold",
                         "This is iphone 11 pro max...",
                         800,
                         "iph11_mini_gold.png",
                         20,
                         "iphone",
-                        colors,
+                        iph11Colors,
                         memSize));
 
         DB.add(
-                new Product(3,
+                new Product(4,
                         "Iphone 11 Pro Gray",
                         "This is iphone 11 pro max...",
                         650,
                         "iph11_mini_gray.png",
                         20,
                         "iphone",
-                        colors, memSize));
+                        iph11Colors,
+                        memSize));
 
         DB.add(
                 new Product(
-                        4,
+                        5,
                         "Iphone 7 Black",
                         "This is iphone 7.. red",
                         200,
@@ -121,7 +144,7 @@ public class ProductServiceImpl implements ProductService {
 
         DB.add(
                 new Product(
-                        5,
+                        6,
                         "Iphone 7 Red",
                         "This is iphone 7..",
                         200,
@@ -132,7 +155,7 @@ public class ProductServiceImpl implements ProductService {
 
         DB.add(
                 new Product(
-                        6,
+                        7,
                         "Iphone 7 Silver",
                         "This is iphone seven",
                         200,
@@ -143,7 +166,7 @@ public class ProductServiceImpl implements ProductService {
 
         DB.add(
                 new Product(
-                        7,
+                        8,
                         "Iphone 7 Rose",
                         "This is iphone 7.",
                         200,
@@ -154,7 +177,7 @@ public class ProductServiceImpl implements ProductService {
 
         DB.add(
                 new Product(
-                        7,
+                        9,
                         "Iphone 7 Gold",
                         "This is iphone 7.. dummy text",
                         200,
@@ -168,20 +191,20 @@ public class ProductServiceImpl implements ProductService {
                         "Lightning Cable",
                         "Light cable",
                         22,
-                        "light.png",
+                        "light_mini_white.png",
                         40,
                         "cables",
-                        colors,
+                        iph11Colors,
                         null));
         DB.add(
                 new Product(31,
                         "Lightning Cable",
                         "Light cable",
                         25,
-                        "light.png",
+                        "light_mini_white.png",
                         35,
                         "cables",
-                        colors,
+                        iph11Colors,
                         null));
 
         categoriesDB.add(
