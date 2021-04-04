@@ -38,7 +38,7 @@ public class Controller {
     @DeleteMapping(path="/categories/{categoryName}")
     public int removeCategory(@PathVariable String categoryName) {
         return this.productService.removeCategory(categoryName);
-    };
+    }
 
     @GetMapping(path="/products/{categoryName}")
     public List<Product> getCategoryProducts(@PathVariable String categoryName) {

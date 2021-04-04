@@ -82,7 +82,7 @@ public class ProductServiceImpl implements ProductService {
                         1,
                         "Iphone 12 Pro Max Purple",
                         "This is new iph 12 pro max...",
-                        900, "iph12_purple_mini.png",
+                        900, "iph12_mini_purple.png",
                         10,
                         "iphone",
                         colors,
@@ -92,7 +92,7 @@ public class ProductServiceImpl implements ProductService {
                         "Iphone 11 Pro Max Gold",
                         "This is iphone 11 pro max...",
                         800,
-                        "iph11_gold_mini.png",
+                        "iph11_mini_gold.png",
                         20,
                         "iphone",
                         colors,
@@ -103,7 +103,7 @@ public class ProductServiceImpl implements ProductService {
                         "Iphone 11 Pro Gray",
                         "This is iphone 11 pro max...",
                         650,
-                        "iph11_gray_mini.png",
+                        "iph11_mini_gray.png",
                         20,
                         "iphone",
                         colors, memSize));
@@ -112,9 +112,9 @@ public class ProductServiceImpl implements ProductService {
                 new Product(
                         4,
                         "Iphone 7 Black",
-                        "This is iphone 7.. dummy text",
+                        "This is iphone 7.. red",
                         200,
-                        "iph7_black_mini.png",
+                        "iph7_mini_black.png",
                         12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
@@ -123,9 +123,9 @@ public class ProductServiceImpl implements ProductService {
                 new Product(
                         5,
                         "Iphone 7 Red",
-                        "This is iphone 7.. dummy text",
+                        "This is iphone 7..",
                         200,
-                        "iph7_red_mini.png",
+                        "iph7_mini_red.png",
                         12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
@@ -134,9 +134,9 @@ public class ProductServiceImpl implements ProductService {
                 new Product(
                         6,
                         "Iphone 7 Silver",
-                        "This is iphone 7.. dummy text",
+                        "This is iphone seven",
                         200,
-                        "iph7_black_mini.png",
+                        "iph7_mini_black.png",
                         12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
@@ -145,9 +145,9 @@ public class ProductServiceImpl implements ProductService {
                 new Product(
                         7,
                         "Iphone 7 Rose",
-                        "This is iphone 7.. dummy text",
+                        "This is iphone 7.",
                         200,
-                        "iph7_black_mini.png",
+                        "iph7_mini_black.png",
                         12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
@@ -158,7 +158,7 @@ public class ProductServiceImpl implements ProductService {
                         "Iphone 7 Gold",
                         "This is iphone 7.. dummy text",
                         200,
-                        "iph7_gold_mini.png",
+                        "iph7_mini_gold.png",
                         12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
@@ -168,7 +168,7 @@ public class ProductServiceImpl implements ProductService {
                         "Lightning Cable",
                         "Light cable",
                         22,
-                        "iph7_black_mini.png",
+                        "light.png",
                         40,
                         "cables",
                         colors,
@@ -178,7 +178,7 @@ public class ProductServiceImpl implements ProductService {
                         "Lightning Cable",
                         "Light cable",
                         25,
-                        "iph7_black_mini.png",
+                        "light.png",
                         35,
                         "cables",
                         colors,
