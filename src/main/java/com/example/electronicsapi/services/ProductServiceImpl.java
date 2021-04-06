@@ -30,72 +30,73 @@ public class ProductServiceImpl implements ProductService {
         cablesColors = new ArrayList<>();
 
         cablesColors.add(
-                new Color("white", true)
+                new Color("white", true, 10)
         );
 
         cablesColors.add(
-                new Color("black", true)
+                new Color("black", true, 10)
         );
+
         cablesColors.add(
-                new Color("red", true)
+                new Color("red", true, 10)
         );
 
         iph12Colors.add(
-                new Color("silver", true)
+                new Color("silver", true, 2)
         );
         iph12Colors.add(
-                new Color("purple", true)
+                new Color("purple", true, 3)
         );
         iph12Colors.add(
-                new Color("blue", true)
+                new Color("blue", true, 1)
         );
 
         iph11Colors.add(
-                new Color("gray",true )
+                new Color("gray",true, 1)
         );
 
         iph11Colors.add(
-                new Color("gold",true )
+                new Color("gold",true, 1)
         );
 
         iphone7Colors.add(
-                new Color("black", true)
+                new Color("black", true, 1)
         );
         iphone7Colors.add(
-                new Color("red", true)
+                new Color("red", true, 1)
         );
         iphone7Colors.add(
-                new Color("silver", true)
+                new Color("silver", true, 1)
         );
 
         iphone7memSize.add(
                 new Capacity(
-                        "32GB", true, 0
+                        "32GB", true, 0, 1
                 )
         );
 
         iphone7memSize.add(
                 new Capacity(
-                        "128GB", true, 2
+                        "128GB", true, 2, 1
                 )
         );
 
         iphone7memSize.add(
                 new Capacity(
-                        "256GB", true, 3
+                        "256GB", true, 3, 1
                 )
         );
 
         iph12MemSize.add(
-                new Capacity("128GB", true, 699)
+                new Capacity("128GB", true, 699, 1)
         );
 
         iph12MemSize.add(
-                new Capacity("256GB", true, 799)
+                new Capacity("256GB", true, 799, 1)
         );
 
         iph12MemSize.add(
-                new Capacity("512GB", true, 899)
+                new Capacity("512GB", true, 899, 1)
         );
 
         DB.add(
@@ -212,7 +213,7 @@ public class ProductServiceImpl implements ProductService {
                         "HDMI Cable",
                         "HDMI",
                         25,
-                        "light_mini_white.png",
+                        "hdmi_mini.png",
                         35,
                         "cables",
                         null,
