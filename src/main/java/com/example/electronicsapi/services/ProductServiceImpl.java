@@ -5,7 +5,6 @@ import com.example.electronicsapi.entities.Category;
 import com.example.electronicsapi.entities.Color;
 import com.example.electronicsapi.entities.Product;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,19 +13,32 @@ public class ProductServiceImpl implements ProductService {
     List<Product> DB;
     List<Category> categoriesDB;
     List<Color> iph12Colors;
-    List<Capacity> memSize;
+    List<Capacity> iph12MemSize;
     List<Color> iphone7Colors;
     List<Capacity> iphone7memSize;
     List<Color> iph11Colors;
+    List<Color> cablesColors;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
         categoriesDB = new ArrayList<>();
         iph12Colors = new ArrayList<>();
-        memSize = new ArrayList<>();
+        iph12MemSize = new ArrayList<>();
         iphone7Colors = new ArrayList<>();
         iphone7memSize = new ArrayList<>();
         iph11Colors = new ArrayList<>();
+        cablesColors = new ArrayList<>();
+
+        cablesColors.add(
+                new Color("white", true)
+        );
+
+        cablesColors.add(
+                new Color("black", true)
+        );
+        cablesColors.add(
+                new Color("red", true)
+        );
 
         iph12Colors.add(
                 new Color("silver", true)
@@ -74,29 +86,28 @@ public class ProductServiceImpl implements ProductService {
                 )
         );
 
-
-        memSize.add(
-                new Capacity("128GB", true, 0)
+        iph12MemSize.add(
+                new Capacity("128GB", true, 699)
         );
 
-        memSize.add(
-                new Capacity("256GB", true, 70)
+        iph12MemSize.add(
+                new Capacity("256GB", true, 799)
         );
 
-        memSize.add(
-                new Capacity("512GB", true, 120)
+        iph12MemSize.add(
+                new Capacity("512GB", true, 899)
         );
 
         DB.add(
                 new Product(
                         1,
-                        "Iphone 12 Blue",
+                        "Iphone 12",
                         "This is iphone 12 Blue...",
-                        900, "iph12_mini_blue.png",
+                        699, "iph12_mini_blue.png",
                         10,
                         "iphone",
                         iph12Colors,
-                        memSize));
+                        iph12MemSize));
 
         DB.add(
                 new Product(
@@ -107,7 +118,7 @@ public class ProductServiceImpl implements ProductService {
                         10,
                         "iphone",
                         iph12Colors,
-                        memSize));
+                        iph12MemSize));
 
         DB.add(
                 new Product(3,
@@ -118,7 +129,7 @@ public class ProductServiceImpl implements ProductService {
                         20,
                         "iphone",
                         iph11Colors,
-                        memSize));
+                        iph12MemSize));
 
         DB.add(
                 new Product(4,
@@ -129,7 +140,7 @@ public class ProductServiceImpl implements ProductService {
                         20,
                         "iphone",
                         iph11Colors,
-                        memSize));
+                        iph12MemSize));
 
         DB.add(
                 new Product(
@@ -194,17 +205,17 @@ public class ProductServiceImpl implements ProductService {
                         "light_mini_white.png",
                         40,
                         "cables",
-                        iph11Colors,
+                        cablesColors,
                         null));
         DB.add(
                 new Product(31,
-                        "Lightning Cable",
-                        "Light cable",
+                        "HDMI Cable",
+                        "HDMI",
                         25,
                         "light_mini_white.png",
                         35,
                         "cables",
-                        iph11Colors,
+                        null,
                         null));
 
         categoriesDB.add(
