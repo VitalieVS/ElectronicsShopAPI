@@ -5,6 +5,7 @@ import com.example.electronicsapi.entities.Category;
 import com.example.electronicsapi.entities.Color;
 import com.example.electronicsapi.entities.Product;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,18 +46,18 @@ public class ProductServiceImpl implements ProductService {
                 new Color("silver", true, 2)
         );
         iph12Colors.add(
-                new Color("purple", true, 3)
+                new Color("purple", true, 1)
         );
         iph12Colors.add(
                 new Color("blue", true, 1)
         );
 
         iph11Colors.add(
-                new Color("gray",true, 1)
+                new Color("gray", true, 1)
         );
 
         iph11Colors.add(
-                new Color("gold",true, 1)
+                new Color("gold", true, 1)
         );
 
         iphone7Colors.add(
@@ -88,15 +89,15 @@ public class ProductServiceImpl implements ProductService {
         );
 
         iph12MemSize.add(
-                new Capacity("128GB", true, 699, 1)
+                new Capacity("128GB", true, 699, 2)
         );
 
         iph12MemSize.add(
-                new Capacity("256GB", true, 799, 1)
+                new Capacity("256GB", true, 799, 5)
         );
 
         iph12MemSize.add(
-                new Capacity("512GB", true, 899, 1)
+                new Capacity("512GB", true, 899, 3)
         );
 
         DB.add(
@@ -105,18 +106,15 @@ public class ProductServiceImpl implements ProductService {
                         "Iphone 12",
                         "This is iphone 12 Blue...",
                         699, "iph12_mini_blue.png",
-                        10,
                         "iphone",
                         iph12Colors,
                         iph12MemSize));
-
         DB.add(
                 new Product(
                         2,
                         "Iphone 12 Pro Max",
                         "This is new iph 12 pro max...",
                         900, "iph12_mini_purple.png",
-                        10,
                         "iphone",
                         iph12Colors,
                         iph12MemSize));
@@ -127,7 +125,6 @@ public class ProductServiceImpl implements ProductService {
                         "This is iphone 11 pro max...",
                         800,
                         "iph11_mini_gold.png",
-                        20,
                         "iphone",
                         iph11Colors,
                         iph12MemSize));
@@ -138,7 +135,6 @@ public class ProductServiceImpl implements ProductService {
                         "This is iphone 11 pro max...",
                         650,
                         "iph11_mini_gray.png",
-                        20,
                         "iphone",
                         iph11Colors,
                         iph12MemSize));
@@ -150,7 +146,6 @@ public class ProductServiceImpl implements ProductService {
                         "This is iphone 7.. red",
                         200,
                         "iph7_mini_black.png",
-                        12,
                         "iphone",
                         iphone7Colors, iphone7memSize));
 

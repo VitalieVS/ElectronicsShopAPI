@@ -38,8 +38,6 @@ public class Capacity {
         this.quantity = quantity;
     }
 
-
-
     public Capacity(String size, boolean available, int price, int quantity) {
         this.size = size;
         this.available = available;

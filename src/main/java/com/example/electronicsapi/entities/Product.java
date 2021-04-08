@@ -60,7 +60,24 @@ public class Product {
         this.imageUrl = imageUrl;
         this.quantity = quantity;
         this.category = category;
+    }
 
+    public Product(long id,
+                   String title,
+                   String description,
+                   double price,
+                   String imageUrl,
+                   String category,
+                   List<Color> colors,
+                   List<Capacity> memoryCapacity) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
+        this.category = category;
+        this.colors = colors;
+        this.memoryCapacity = memoryCapacity;
     }
 
     public void setCategory(String category) {
