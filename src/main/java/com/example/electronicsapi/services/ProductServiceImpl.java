@@ -1,9 +1,6 @@
 package com.example.electronicsapi.services;
 
-import com.example.electronicsapi.entities.Capacity;
-import com.example.electronicsapi.entities.Category;
-import com.example.electronicsapi.entities.Color;
-import com.example.electronicsapi.entities.Product;
+import com.example.electronicsapi.entities.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,6 +16,7 @@ public class ProductServiceImpl implements ProductService {
     List<Capacity> iphone7memSize;
     List<Color> iph11Colors;
     List<Color> cablesColors;
+    List<Discount> discountDB;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
@@ -29,6 +27,56 @@ public class ProductServiceImpl implements ProductService {
         iphone7memSize = new ArrayList<>();
         iph11Colors = new ArrayList<>();
         cablesColors = new ArrayList<>();
+        discountDB = new ArrayList<>();
+
+        discountDB.add(
+                new Discount("d1", 5, "XQUJMNT6SUVE")
+        );
+        discountDB.add(
+                new Discount("d2", 5, "TIJSOFRDVIL0")
+        );
+        discountDB.add(
+                new Discount("d3", 5, "DMDOABEQJOQH")
+        );
+        discountDB.add(
+                new Discount("d4", 5, "6KO10AV8ABW2")
+        );
+        discountDB.add(
+                new Discount("d5", 5, "Y1WC0QPAJDXC")
+        );
+
+        discountDB.add(
+                new Discount("d6", 10, "44RP37GMIV99")
+        );
+        discountDB.add(
+                new Discount("d7", 10, "TXIZ1TER0YWB")
+        );
+        discountDB.add(
+                new Discount("d8", 10, "700KQQZ6KO3O")
+        );
+        discountDB.add(
+                new Discount("d9", 10, "QXJ5SJEUHLV9")
+        );
+        discountDB.add(
+                new Discount("d10", 10, "AKPPN9CBCU3L")
+        );
+
+        discountDB.add(
+                new Discount("d11", 15, "IDOR71LUDS2J")
+        );
+        discountDB.add(
+                new Discount("d12", 15, "WUVZZQZPEJN9")
+        );
+        discountDB.add(
+                new Discount("d13", 15, "JRRZQUEM301Q")
+        );
+        discountDB.add(
+                new Discount("d14", 15, "KXT91FVA34HA")
+        );
+        discountDB.add(
+                new Discount("d15", 15, "13W6FDI97HTI")
+        );
+
 
         cablesColors.add(
                 new Color("white", true, 10)
@@ -281,6 +329,16 @@ public class ProductServiceImpl implements ProductService {
             }
         }
         return temp;
+    }
+
+    @Override
+    public Discount getDiscount(String coupon) {
+        for (Discount discount: discountDB) {
+            if (discount.getCode().equalsIgnoreCase(coupon)){
+                return discount;
+            }
+        }
+        return null;
     }
 
 }

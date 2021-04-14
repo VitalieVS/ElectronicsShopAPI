@@ -1,6 +1,7 @@
 package com.example.electronicsapi.services;
 
 import com.example.electronicsapi.entities.Category;
+import com.example.electronicsapi.entities.Discount;
 import com.example.electronicsapi.entities.Product;
 
 import java.util.List;
@@ -17,5 +18,7 @@ public interface ProductService {
     int removeCategory(String category);
 
     List<Product> getCategoryProducts(String category);
+
+    Discount getDiscount(String coupon);
 
 }

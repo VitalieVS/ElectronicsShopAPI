@@ -1,6 +1,7 @@
 package com.example.electronicsapi.controller;
 
 import com.example.electronicsapi.entities.Category;
+import com.example.electronicsapi.entities.Discount;
 import com.example.electronicsapi.entities.Product;
 import com.example.electronicsapi.services.ProductService;
 import org.springframework.web.bind.annotation.*;
@@ -43,6 +44,11 @@ public class Controller {
     @GetMapping(path="/products/{categoryName}")
     public List<Product> getCategoryProducts(@PathVariable String categoryName) {
         return this.productService.getCategoryProducts(categoryName);
+    }
+
+    @GetMapping(path="/discount/{coupon}")
+    public Discount getDiscount(@PathVariable String coupon) {
+        return this.productService.getDiscount(coupon);
     }
     
 }
