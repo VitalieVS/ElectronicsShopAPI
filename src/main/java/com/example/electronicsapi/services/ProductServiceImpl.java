@@ -338,7 +338,7 @@ public class ProductServiceImpl implements ProductService {
                 return discount;
             }
         }
-        return null;
+        return new Discount(null, 0, null);
     }
 
 }
