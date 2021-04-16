@@ -333,12 +333,23 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Discount getDiscount(String coupon) {
-        for (Discount discount: discountDB) {
-            if (discount.getCode().equalsIgnoreCase(coupon)){
+        for (Discount discount : discountDB) {
+            if (discount.getCode().equalsIgnoreCase(coupon)) {
                 return discount;
             }
         }
         return new Discount(null, 0, null);
+    }
+
+    @Override
+    public int removeDiscount(String id) {
+        for (Discount discount : discountDB) {
+            if (discount.getId().equalsIgnoreCase(id)) {
+                discountDB.remove(discount);
+                return 1;
+            }
+        }
+        return 0;
     }
 
 }

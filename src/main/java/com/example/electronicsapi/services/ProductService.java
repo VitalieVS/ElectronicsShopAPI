@@ -21,4 +21,6 @@ public interface ProductService {
 
     Discount getDiscount(String coupon);
 
+    int removeDiscount(String id);
+
 }

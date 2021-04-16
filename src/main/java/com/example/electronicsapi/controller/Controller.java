@@ -50,5 +50,10 @@ public class Controller {
     public Discount getDiscount(@PathVariable String coupon) {
         return this.productService.getDiscount(coupon);
     }
+
+    @DeleteMapping(path="/discount/{couponID}")
+    int removeDiscount(@PathVariable String couponID) {
+        return this.productService.removeDiscount(couponID);
+    }
     
 }
