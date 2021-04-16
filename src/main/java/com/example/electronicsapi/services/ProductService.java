@@ -5,6 +5,7 @@ import com.example.electronicsapi.entities.Discount;
 import com.example.electronicsapi.entities.Product;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ProductService {
     List<Product> getProducts();
@@ -21,6 +22,6 @@ public interface ProductService {
 
     Discount getDiscount(String coupon);
 
-    int removeDiscount(String id);
+    Map<String, Boolean> removeDiscount(String id);
 
 }

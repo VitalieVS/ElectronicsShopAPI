@@ -6,6 +6,7 @@ import com.example.electronicsapi.entities.Product;
 import com.example.electronicsapi.services.ProductService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class Controller {
@@ -52,8 +53,8 @@ public class Controller {
     }
 
     @DeleteMapping(path="/discount/{couponID}")
-    int removeDiscount(@PathVariable String couponID) {
-        return this.productService.removeDiscount(couponID);
+    public Map<String, Boolean> removeDiscount(@PathVariable (value = "couponID") String id) {
+        return this.productService.removeDiscount(id);
     }
     
 }

@@ -4,7 +4,9 @@ import com.example.electronicsapi.entities.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -342,14 +344,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public int removeDiscount(String id) {
+    public Map<String, Boolean> removeDiscount(String id) {
+        Map<String, Boolean> response = new HashMap<>();
         for (Discount discount : discountDB) {
             if (discount.getId().equalsIgnoreCase(id)) {
                 discountDB.remove(discount);
-                return 1;
+                response.put("deleted", Boolean.TRUE);
+                return response;
             }
         }
-        return 0;
+        return response;
     }
 
 }
