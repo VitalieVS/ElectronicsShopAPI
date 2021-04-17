@@ -19,6 +19,10 @@ public class ProductServiceImpl implements ProductService {
     List<Color> iph11Colors;
     List<Color> cablesColors;
     List<Discount> discountDB;
+    List<Color> iph11CaseDB;
+    List<Color> iphXCaseDB;
+    List<Color> iph11BatteryCaseDB;
+    List<Color> iphXBatteryCaseDB;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
@@ -30,6 +34,10 @@ public class ProductServiceImpl implements ProductService {
         iph11Colors = new ArrayList<>();
         cablesColors = new ArrayList<>();
         discountDB = new ArrayList<>();
+        iph11CaseDB = new ArrayList<>();
+        iphXCaseDB = new ArrayList<>();
+        iph11BatteryCaseDB = new ArrayList<>();
+        iphXBatteryCaseDB = new ArrayList<>();
 
         discountDB.add(
                 new Discount("d1", 5, "XQUJMNT6SUVE")
@@ -263,6 +271,97 @@ public class ProductServiceImpl implements ProductService {
                         "cables",
                         null,
                         null));
+
+        iph11CaseDB.add(
+                new Color("black", true, 5)
+        );
+
+        iph11CaseDB.add(
+                new Color("green", true, 3)
+        );
+        iph11CaseDB.add(
+                new Color("pink", true, 6)
+        );
+
+
+
+        iphXCaseDB.add(
+                new Color("black", true, 5)
+        );
+
+        iphXCaseDB.add(
+                new Color("blue", true, 2)
+        );
+
+        iphXCaseDB.add(
+                new Color("red", true, 4)
+        );
+
+        iph11BatteryCaseDB.add(
+                new Color("black", true, 4)
+        );
+        iph11BatteryCaseDB.add(
+                new Color("pink", true, 2)
+        );
+        iph11BatteryCaseDB.add(
+                new Color("white", true, 1)
+        );
+
+        iphXBatteryCaseDB.add(
+                new Color("black", true, 2)
+        );
+
+        iphXBatteryCaseDB.add(
+                new Color("white", true, 3)
+        );
+
+        DB.add(
+                new Product(40,
+                        "Iphone 11 Case",
+                        "Dont matter",
+                        30,
+                        "iph11_mini_black.png",
+                        20,
+                        "cases",
+                        iph11CaseDB,
+                        null)
+        );
+
+        DB.add(
+                new Product(41,
+                        "Iphone X Case",
+                        "Don't matter",
+                        29,
+                        "iphx_mini_black.png",
+                        30,
+                        "cases",
+                        iphXCaseDB,
+                        null)
+        );
+
+        DB.add(
+                new Product(42,
+                        "Iphone 11 Battery Case",
+                        "Don't matter",
+                        59,
+                        "iph11battery_mini_black.png",
+                        20,
+                        "cases",
+                        iph11BatteryCaseDB,
+                        null)
+        );
+        DB.add(
+                new Product(43,
+                        "Iphone X Battery Case",
+                        "Don't matter",
+                        49,
+                        "iphxbattery_mini_black.png",
+                        20,
+                        "cases",
+                        iphXBatteryCaseDB,
+                        null)
+        );
+
 
         categoriesDB.add(
                 new Category("Iphone"));
