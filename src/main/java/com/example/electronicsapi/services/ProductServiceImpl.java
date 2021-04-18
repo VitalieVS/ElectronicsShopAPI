@@ -394,7 +394,6 @@ public class ProductServiceImpl implements ProductService {
                         null)
         );
 
-
         categoriesDB.add(
                 new Category("Iphone"));
         categoriesDB.add(
