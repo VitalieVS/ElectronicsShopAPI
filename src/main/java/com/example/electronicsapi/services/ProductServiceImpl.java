@@ -16,13 +16,18 @@ public class ProductServiceImpl implements ProductService {
     List<Capacity> iph12MemSize;
     List<Color> iphone7Colors;
     List<Capacity> iphone7memSize;
-    List<Color> iph11Colors;
+    List<Color> iph11maxColors;
     List<Color> cablesColors;
     List<Discount> discountDB;
     List<Color> iph11CaseDB;
     List<Color> iphXCaseDB;
     List<Color> iph11BatteryCaseDB;
     List<Color> iphXBatteryCaseDB;
+    List<Capacity> iph11maxMemSize;
+    List<Color> iph11Colors;
+    List<Capacity> iph11MemSize;
+    List<Capacity> ipxMemSize;
+    List<Color> iphxColors;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
@@ -31,13 +36,56 @@ public class ProductServiceImpl implements ProductService {
         iph12MemSize = new ArrayList<>();
         iphone7Colors = new ArrayList<>();
         iphone7memSize = new ArrayList<>();
-        iph11Colors = new ArrayList<>();
+        iph11maxColors = new ArrayList<>();
         cablesColors = new ArrayList<>();
         discountDB = new ArrayList<>();
         iph11CaseDB = new ArrayList<>();
         iphXCaseDB = new ArrayList<>();
         iph11BatteryCaseDB = new ArrayList<>();
         iphXBatteryCaseDB = new ArrayList<>();
+        iph11maxMemSize = new ArrayList<>();
+        iph11Colors = new ArrayList<>();
+        iph11MemSize = new ArrayList<>();
+        ipxMemSize = new ArrayList<>();
+        iphxColors = new ArrayList<>();
+
+        ipxMemSize.add(
+                new Capacity("64GB", true, 499, 2)
+        );
+        ipxMemSize.add(
+                new Capacity("256GB", true, 599, 1)
+        );
+        ipxMemSize.add(
+                new Capacity("512GB", true, 699, 2)
+        );
+
+        iphxColors.add(
+                new Color("black", true, 3)
+        );
+        iphxColors.add(
+                new Color("gold", true, 2)
+        );
+        iphxColors.add(
+                new Color("white", true, 3)
+        );
+
+
+        iph11Colors.add(
+                new Color("black", true, 3)
+        );
+        iph11Colors.add(
+                new Color("white", true, 5)
+        );
+
+        iph11MemSize.add(
+                new Capacity("64GB", true, 699, 4)
+        );
+        iph11MemSize.add(
+                new Capacity("256GB", true, 750, 2)
+        );
+        iph11MemSize.add(
+                new Capacity("256GB", true, 799, 3)
+        );
 
         discountDB.add(
                 new Discount("d1", 5, "XQUJMNT6SUVE")
@@ -87,6 +135,17 @@ public class ProductServiceImpl implements ProductService {
                 new Discount("d15", 15, "13W6FDI97HTI")
         );
 
+        iph11maxMemSize.add(
+                new Capacity("64GB", true, 799, 2)
+        );
+
+        iph11maxMemSize.add(
+                new Capacity("256GB", true, 899, 3)
+        );
+
+        iph11maxMemSize.add(
+                new Capacity("512GB", true, 899, 4)
+        );
 
         cablesColors.add(
                 new Color("white", true, 10)
@@ -110,39 +169,46 @@ public class ProductServiceImpl implements ProductService {
                 new Color("blue", true, 1)
         );
 
-        iph11Colors.add(
-                new Color("gray", true, 1)
+        iph11maxColors.add(
+                new Color("gray", true, 3)
         );
 
-        iph11Colors.add(
-                new Color("gold", true, 1)
+        iph11maxColors.add(
+                new Color("white", true, 2)
+        );
+
+        iph11maxColors.add(
+                new Color("gold", true, 3)
         );
 
         iphone7Colors.add(
                 new Color("black", true, 1)
         );
         iphone7Colors.add(
-                new Color("red", true, 1)
+                new Color("red", true, 2)
         );
         iphone7Colors.add(
-                new Color("silver", true, 1)
+                new Color("silver", true, 3)
+        );
+        iphone7Colors.add(
+                new Color("gold", true, 2)
         );
 
         iphone7memSize.add(
                 new Capacity(
-                        "32GB", true, 0, 1
+                        "32GB", true, 299, 6
                 )
         );
 
         iphone7memSize.add(
                 new Capacity(
-                        "128GB", true, 2, 1
+                        "128GB", true, 349, 3
                 )
         );
 
         iphone7memSize.add(
                 new Capacity(
-                        "256GB", true, 3, 1
+                        "256GB", true, 399, 4
                 )
         );
 
@@ -178,78 +244,45 @@ public class ProductServiceImpl implements ProductService {
                         iph12MemSize));
 
         DB.add(
-                new Product(3,
-                        "Iphone 11 Pro Max Gold",
-                        "This is iphone 11 pro max...",
-                        800,
-                        "iph11_mini_gold.png",
+                new Product(5,
+                        "Iphone 7",
+                        "This is iphone 7...",
+                        299,
+                        "iph7_mini_black.png",
+                        "iphone",
+                        iphone7Colors,
+                        iphone7memSize));
+        DB.add(
+                new Product(6,
+                        "Iphone 11 Pro Max",
+                        "This is iphone 11promax...",
+                        799,
+                        "iph11max_mini_gray.png",
+                        "iphone",
+                        iph11maxColors,
+                        iph11maxMemSize));
+
+        DB.add(
+                new Product(7,
+                        "Iphone 11",
+                        "This is iphone 11...",
+                        599,
+                        "iph11_mini_white.png",
                         "iphone",
                         iph11Colors,
-                        iph12MemSize));
+                        iph11MemSize));
 
         DB.add(
-                new Product(4,
-                        "Iphone 11 Pro Gray",
-                        "This is iphone 11 pro max...",
-                        650,
-                        "iph11_mini_gray.png",
+                new Product(8,
+                        "Iphone X",
+                        "this is iphx",
+                        499,
+                        "iphx_mini_black.png",
                         "iphone",
-                        iph11Colors,
-                        iph12MemSize));
+                        iphxColors,
+                        ipxMemSize
+                ));
 
-        DB.add(
-                new Product(
-                        5,
-                        "Iphone 7 Black",
-                        "This is iphone 7.. red",
-                        200,
-                        "iph7_mini_black.png",
-                        "iphone",
-                        iphone7Colors, iphone7memSize));
-
-        DB.add(
-                new Product(
-                        6,
-                        "Iphone 7 Red",
-                        "This is iphone 7..",
-                        200,
-                        "iph7_mini_red.png",
-                        12,
-                        "iphone",
-                        iphone7Colors, iphone7memSize));
-
-        DB.add(
-                new Product(
-                        7,
-                        "Iphone 7 Silver",
-                        "This is iphone seven",
-                        200,
-                        "iph7_mini_black.png",
-                        12,
-                        "iphone",
-                        iphone7Colors, iphone7memSize));
-
-        DB.add(
-                new Product(
-                        8,
-                        "Iphone 7 Rose",
-                        "This is iphone 7.",
-                        200,
-                        "iph7_mini_black.png",
-                        12,
-                        "iphone",
-                        iphone7Colors, iphone7memSize));
-
-        DB.add(
-                new Product(
-                        9,
-                        "Iphone 7 Gold",
-                        "This is iphone 7.. dummy text",
-                        200,
-                        "iph7_mini_gold.png",
-                        12,
-                        "iphone",
-                        iphone7Colors, iphone7memSize));
 
         DB.add(
                 new Product(30,
@@ -272,6 +305,7 @@ public class ProductServiceImpl implements ProductService {
                         null,
                         null));
 
+
         iph11CaseDB.add(
                 new Color("black", true, 5)
         );
@@ -282,8 +316,6 @@ public class ProductServiceImpl implements ProductService {
         iph11CaseDB.add(
                 new Color("pink", true, 6)
         );
-
-
 
         iphXCaseDB.add(
                 new Color("black", true, 5)
@@ -366,13 +398,9 @@ public class ProductServiceImpl implements ProductService {
         categoriesDB.add(
                 new Category("Iphone"));
         categoriesDB.add(
-                new Category("Power Bank"));
-        categoriesDB.add(
                 new Category("Cables"));
         categoriesDB.add(
                 new Category("Cases"));
-        categoriesDB.add(
-                new Category("Adapters"));
     }
 
     @Override
