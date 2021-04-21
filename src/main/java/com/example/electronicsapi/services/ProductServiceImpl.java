@@ -2,6 +2,7 @@ package com.example.electronicsapi.services;
 
 import com.example.electronicsapi.entities.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
     List<Capacity> iph11MemSize;
     List<Capacity> ipxMemSize;
     List<Color> iphxColors;
+    List<Orders> ORDERDB;
 
     public ProductServiceImpl() {
         DB = new ArrayList<>();
@@ -48,6 +50,7 @@ public class ProductServiceImpl implements ProductService {
         iph11MemSize = new ArrayList<>();
         ipxMemSize = new ArrayList<>();
         iphxColors = new ArrayList<>();
+        ORDERDB = new ArrayList<>();
 
         ipxMemSize.add(
                 new Capacity("64GB", true, 499, 2)
@@ -480,6 +483,15 @@ public class ProductServiceImpl implements ProductService {
             }
         }
         return response;
+    }
+
+    @Override
+    public int addOrders(Orders order) {
+        ORDERDB.add(order);
+        for (Orders item: ORDERDB) {
+            System.out.println(item.getTotalPrice());
+        }
+        return 1;
     }
 
 }

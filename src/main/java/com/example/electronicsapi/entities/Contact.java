@@ -1,6 +1,6 @@
 package com.example.electronicsapi.entities;
 
-public class Contacts {
+public class Contact {
     private String name;
     private String surname;
     private String address;
@@ -8,7 +8,7 @@ public class Contacts {
     private String city;
     private String country;
 
-    public Contacts(String name, String surname, String address, String phone, String city, String country) {
+    public Contact(String name, String surname, String address, String phone, String city, String country) {
         this.name = name;
         this.surname = surname;
         this.address = address;

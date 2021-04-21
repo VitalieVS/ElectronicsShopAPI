@@ -1,18 +1,19 @@
 package com.example.electronicsapi.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class Orders {
     private UUID id;
-    private List<Product> products;
-    private Contacts contact;
+    private List<ProductOrder> products;
+    private Contact contact;
     private String shippingPrice;
     private Discount discount;
     private double totalPrice;
 
-    public Orders(UUID id, List<Product> products, Contacts contact, String shippingPrice, Discount discount, double totalPrice) {
-        this.id = id;
+    public Orders(List<ProductOrder> products, Contact contact, String shippingPrice, Discount discount, double totalPrice) {
+        this.id = UUID.randomUUID();
         this.products = products;
         this.contact = contact;
         this.shippingPrice = shippingPrice;
@@ -24,11 +25,11 @@ public class Orders {
         this.id = id;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<ProductOrder> products) {
         this.products = products;
     }
 
-    public void setContact(Contacts contact) {
+    public void setContact(Contact contact) {
         this.contact = contact;
     }
 
@@ -48,11 +49,11 @@ public class Orders {
         return id;
     }
 
-    public List<Product> getProducts() {
+    public List<ProductOrder> getProducts() {
         return products;
     }
 
-    public Contacts getContact() {
+    public Contact getContact() {
         return contact;
     }
 
