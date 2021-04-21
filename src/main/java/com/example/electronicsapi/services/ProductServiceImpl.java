@@ -482,4 +482,9 @@ public class ProductServiceImpl implements ProductService {
         return 1;
     }
 
+    @Override
+    public List<Orders> getOrders() {
+        return ORDERDB;
+    }
+
 }

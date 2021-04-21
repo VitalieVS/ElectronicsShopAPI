@@ -1,9 +1,6 @@
 package com.example.electronicsapi.controller;
 
-import com.example.electronicsapi.entities.Category;
-import com.example.electronicsapi.entities.Discount;
-import com.example.electronicsapi.entities.Orders;
-import com.example.electronicsapi.entities.Product;
+import com.example.electronicsapi.entities.*;
 import com.example.electronicsapi.services.ProductService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -69,6 +66,11 @@ public class Controller {
     }, path="/orders/")
     public int addOrders(@RequestBody Orders order) {
         return this.productService.addOrders(order);
+    }
+
+    @GetMapping(path="/orders/getOrders")
+    public List<Orders> getOrders() {
+        return this.productService.getOrders();
     }
     
 }
