@@ -273,7 +273,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(8,
                         "Iphone X",
-                        "this is iphx",
                         499,
                         "iphx_mini_black.png",
                         "iphone",
