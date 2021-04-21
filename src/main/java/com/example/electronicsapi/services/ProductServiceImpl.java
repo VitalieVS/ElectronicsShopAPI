@@ -231,7 +231,6 @@ public class ProductServiceImpl implements ProductService {
                 new Product(
                         1,
                         "Iphone 12",
-                        "This is iphone 12 Blue...",
                         699, "iph12_mini_blue.png",
                         "iphone",
                         iph12Colors,
@@ -240,7 +239,6 @@ public class ProductServiceImpl implements ProductService {
                 new Product(
                         2,
                         "Iphone 12 Pro Max",
-                        "This is new iph 12 pro max...",
                         900, "iph12_mini_purple.png",
                         "iphone",
                         iph12Colors,
@@ -249,7 +247,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(5,
                         "Iphone 7",
-                        "This is iphone 7...",
                         299,
                         "iph7_mini_black.png",
                         "iphone",
@@ -258,7 +255,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(6,
                         "Iphone 11 Pro Max",
-                        "This is iphone 11promax...",
                         799,
                         "iph11max_mini_gray.png",
                         "iphone",
@@ -268,7 +264,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(7,
                         "Iphone 11",
-                        "This is iphone 11...",
                         599,
                         "iph11_mini_white.png",
                         "iphone",
@@ -290,7 +285,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(30,
                         "Lightning Cable",
-                        "Light cable",
                         22,
                         "light_mini_white.png",
                         40,
@@ -300,7 +294,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(31,
                         "HDMI Cable",
-                        "HDMI",
                         25,
                         "hdmi_mini.png",
                         35,
@@ -353,7 +346,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(40,
                         "Iphone 11 Case",
-                        "Dont matter",
                         30,
                         "iph11_mini_black.png",
                         20,
@@ -365,7 +357,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(41,
                         "Iphone X Case",
-                        "Don't matter",
                         29,
                         "iphx_mini_black.png",
                         30,
@@ -377,7 +368,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(42,
                         "Iphone 11 Battery Case",
-                        "Don't matter",
                         59,
                         "iph11battery_mini_black.png",
                         20,
@@ -388,7 +378,6 @@ public class ProductServiceImpl implements ProductService {
         DB.add(
                 new Product(43,
                         "Iphone X Battery Case",
-                        "Don't matter",
                         49,
                         "iphxbattery_mini_black.png",
                         20,

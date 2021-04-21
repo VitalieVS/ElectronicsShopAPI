@@ -5,7 +5,6 @@ import java.util.List;
 public class Product {
     private long id;
     private String title;
-    private String description;
     private double price;
     private String imageUrl;
     private int quantity;
@@ -28,7 +27,6 @@ public class Product {
 
     public Product(long id,
                    String title,
-                   String description,
                    double price,
                    String imageUrl,
                    int quantity,
@@ -37,7 +35,6 @@ public class Product {
                    List<Capacity> memoryCapacity) {
         this.id = id;
         this.title = title;
-        this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
         this.quantity = quantity;
@@ -48,14 +45,12 @@ public class Product {
 
     public Product(long id,
                    String title,
-                   String description,
                    double price,
                    String imageUrl,
                    int quantity,
                    String category) {
         this.id = id;
         this.title = title;
-        this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
         this.quantity = quantity;
@@ -64,7 +59,6 @@ public class Product {
 
     public Product(long id,
                    String title,
-                   String description,
                    double price,
                    String imageUrl,
                    String category,
@@ -72,7 +66,6 @@ public class Product {
                    List<Capacity> memoryCapacity) {
         this.id = id;
         this.title = title;
-        this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
         this.category = category;
@@ -100,9 +93,6 @@ public class Product {
         this.title = title;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public void setPrice(double price) {
         this.price = price;
@@ -114,10 +104,6 @@ public class Product {
 
     public String getTitle() {
         return title;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public double getPrice() {
