@@ -476,9 +476,9 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public int addOrders(Orders order) {
         ORDERDB.add(order);
-        for (Orders item: ORDERDB) {
-            System.out.println(item.getTotalPrice());
-        }
+//        for (Orders item: ORDERDB) {
+//            System.out.println(item.getTotalPrice());
+//        }
         return 1;
     }
 

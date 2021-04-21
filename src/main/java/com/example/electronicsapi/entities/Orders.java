@@ -1,6 +1,5 @@
 package com.example.electronicsapi.entities;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -8,11 +7,11 @@ public class Orders {
     private UUID id;
     private List<ProductOrder> products;
     private Contact contact;
-    private String shippingPrice;
+    private double shippingPrice;
     private Discount discount;
     private double totalPrice;
 
-    public Orders(List<ProductOrder> products, Contact contact, String shippingPrice, Discount discount, double totalPrice) {
+    public Orders(List<ProductOrder> products, Contact contact, double shippingPrice, Discount discount, double totalPrice) {
         this.id = UUID.randomUUID();
         this.products = products;
         this.contact = contact;
@@ -33,7 +32,7 @@ public class Orders {
         this.contact = contact;
     }
 
-    public void setShippingPrice(String shippingPrice) {
+    public void setShippingPrice(double shippingPrice) {
         this.shippingPrice = shippingPrice;
     }
 
@@ -57,7 +56,7 @@ public class Orders {
         return contact;
     }
 
-    public String getShippingPrice() {
+    public double getShippingPrice() {
         return shippingPrice;
     }
 
